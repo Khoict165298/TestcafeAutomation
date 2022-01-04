@@ -18,8 +18,6 @@ class Utils {
         }
         return text;
     }
-
-
 }
 
 export default Utils;
