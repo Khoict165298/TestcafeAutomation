@@ -1,0 +1,33 @@
+{
+  "name": "ACAG.PLATONL.Admin.App.UITests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testAll": "testcafe chrome modules",
+    "testPipeline": "npx testcafe chrome:headless modules --reporter spec,xunit:admin-report.xml",
+    "testManagerAccount": "testcafe chrome modules/manager-setting-context --skip-js-errors",
+    "testAuthentication": "testcafe chrome modules/authentication --skip-js-errors",
+    "testTranslate": "testcafe chrome modules/translated-data --skip-js-errors",
+    "testTerm": "testcafe chrome modules/customize-term --skip-js-errors",
+    "testTermConcurrency": "testcafe chrome modules/customize-term/tests/concurrency-term.fixture.js --skip-js-errors",
+    "testExChangeRate": "testcafe chrome modules/finances/currency --skip-js-errors",
+    "testExTranslate": "testcafe chrome modules/finances/currency/translated-data --skip-js-errors",
+    "testManageCurrency": "testcafe chrome modules/finances/currency/manage-currency/tests/concurrency-currency.fixture.js --skip-js-errors",
+    "testManagePayment": "testcafe chrome modules/finances/payment/manage-payment/tests/delete-payment.fixture.js",
+    "testManageDunning": "testcafe chrome modules/finances/dunning-level/manage-dunning-level/tests/create-dunning-level.fixture.js --skip-js-errors",
+    "testDunningTranslate": "testcafe chrome modules/finances/dunning-level/translated-data --skip-js-errors",
+    "testDunningCurrency": "testcafe chrome modules/finances/dunning-level/dunning-level-currency --skip-js-errors"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^1.16.1",
+    "testcafe-reporter-xunit": "^2.1.0"
+  },
+  "dependencies": {
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}
+
